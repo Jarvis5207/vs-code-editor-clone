@@ -1,31 +1,46 @@
 body {
-  margin: 0; font-family: Arial, sans-serif; background: #282c34; color: #eee;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #1e1e1e;
+  color: #fff;
 }
-.login-container {
-  max-width: 360px; margin: 100px auto; padding: 20px;
-  background: #3c4048; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
-.login-container h2 { margin-bottom: 20px; text-align: center; }
-.login-container input {
-  width: 100%; margin: 10px 0; padding: 10px;
-  border: none; border-radius: 4px;
+
+.tabs {
+  background: #252526;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
-.login-container button {
-  width: 100%; padding: 10px; background: #61dafb; color: #000;
-  border: none; border-radius: 4px; font-size: 16px;
+
+.tab-btn, #run-btn, #download-btn, #open-btn, #logout-btn {
+  padding: 8px 14px;
+  background: #0af;
+  color: white;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
-.login-container .message { margin-top: 10px; text-align: center; color: #ff7070; }
 
-.editor-container { display: flex; height: 100vh; flex-direction: column; }
-.tabs {
-  background: #20232a; padding: 10px;
+.tab-btn.active {
+  background: #007acc;
 }
-.tab-btn, #run-btn, #logout-btn, #download-btn, #open-btn {
-  margin-right: 8px; padding: 6px 12px;
-  background: #61dafb; border: none; color: #000;
-  border-radius: 4px; cursor: pointer;
+
+.editor {
+  flex: 1;
+  height: 50vh;
+  border: 1px solid #444;
 }
-.tab-btn.active { background: #21a1f1; color: #fff; }
-.editor { flex: 1; }
-.output { flex: 1; border: none; width: 100%; background: #fff; }
+
+.output {
+  height: 50vh;
+  width: 100%;
+  border: none;
+  background: white;
+}
